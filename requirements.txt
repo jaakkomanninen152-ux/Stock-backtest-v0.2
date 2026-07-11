@@ -1,10 +1,16 @@
-SQLAlchemy>=2.0
-yfinance>=0.2.40
-pandas>=2.0
-numpy>=1.24
-matplotlib>=3.7
-requests>=2.31
-lxml>=4.9
-tabulate>=0.9
-streamlit>=1.30
-pyngrok>=7.0  # only needed to expose Streamlit publicly from Google Colab
+# Versions pinned deliberately (not left as loose ">=" ranges) to avoid the
+# installer resolving mismatched/incompatible compiled-package combinations
+# -- e.g. pandas 3.0+ switched to a PyArrow-backed string implementation by
+# default, which pulls in new C++ extensions that can segfault if paired
+# with an incompatible numpy build. This pinned set is a known-stable,
+# mutually-compatible combination as of testing.
+numpy==2.1.3
+pandas==2.2.3
+matplotlib==3.9.2
+SQLAlchemy==2.0.35
+yfinance==0.2.44
+requests==2.32.3
+lxml==5.3.0
+tabulate==0.9.0
+streamlit==1.59.1
+pyngrok==7.2.0  # only needed to expose Streamlit publicly from Google Colab
