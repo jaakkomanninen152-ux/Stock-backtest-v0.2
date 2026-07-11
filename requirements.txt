@@ -1,0 +1,10 @@
+SQLAlchemy>=2.0
+yfinance>=0.2.40
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+requests>=2.31
+lxml>=4.9
+tabulate>=0.9
+streamlit>=1.30
+pyngrok>=7.0  # only needed to expose Streamlit publicly from Google Colab
